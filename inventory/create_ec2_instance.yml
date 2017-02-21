@@ -3,3 +3,8 @@
   tasks:
     - name: Gather ec2 remote facts
       ec2_remote_facts:
+      register: ec2_facts
+
+    - name: Debug
+      debug:
+        msg: "{{ ec2_facts }}"

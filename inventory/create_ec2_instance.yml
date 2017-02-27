@@ -8,3 +8,7 @@
     - name: Debug
       debug:
         msg: "{{ ec2_facts }}"
+
+    - name: Debug hostvars
+      debug:
+      msg: "{{ hostvars }}"

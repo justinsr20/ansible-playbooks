@@ -1,6 +1,6 @@
 ---
-#- hosts: localhost
-  tasks:
+  - hosts: all
+    tasks:
     - name: Gather ec2 remote facts
       ec2_remote_facts:
       register: ec2_facts

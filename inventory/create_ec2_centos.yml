@@ -3,7 +3,7 @@
     vars:
       region: ap-southeast-2
     tasks:
-    - name: Create ec2 instance
+    - name: Create centos ec2 instance
       ec2:
         instance_type: t2.micro
         image: ami-5b778339
@@ -21,7 +21,7 @@
         region: "{{ region }}"
         user_data: |
                      #!/bin/sh
-                     echo "{{ lookup('file', '/home/judd/.ssh/appuser.pub') }}" >> /home/centos/.ssh/authorized_keys
+                     echo "{{ lookup('file', '/home/judd/.ssh/centos.pub') }}" >> /home/centos/.ssh/authorized_keys
                      restorecon -Rv ~/.ssh
 
 

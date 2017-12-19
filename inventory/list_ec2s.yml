@@ -2,7 +2,7 @@
   - hosts: all
     tasks:
     - name: Gather ec2 remote facts
-      ec2_instance_facts:
+      ec2_facts:
       register: ec2_facts
 
     - name: Debug

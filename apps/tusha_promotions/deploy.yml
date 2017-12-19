@@ -1,0 +1,8 @@
+---
+
+- hosts: all
+  tasks:
+    - include: '../../roles/common/create_user/tasks/main.yml'
+
+#    vars:
+#      dir: '..\..\roles\common\'
